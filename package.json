@@ -44,6 +44,9 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
+    "flickity": "^2.1.2",
+    "flickity-hash": "^1.0.3",
+    "normalize.css": "^8.0.1",
     "postcss-cli-simple": "^1.0.4"
   }
 }
