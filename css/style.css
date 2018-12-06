@@ -48,19 +48,18 @@ body {
 .carousel {
   background: #003366;
   min-height: 250px;
-  height: 50vh;
-  position: relative;
+  height: 50%;
   width: 100%;
 }
 
 .carousel .carousel-cell {
   width: 100%;
-  height: 100%;
   margin-right: 10px;
   background: #003366;
   counter-increment: carousel-cell;
   display: flex;
   justify-content: center;
+  min-height: 250px;
 }
 
 .carousel .carousel-cell .container {
@@ -70,6 +69,7 @@ body {
   background-size: cover;
   background-position: center;
   text-align: center;
+  min-height: 250px;
   height: 100%;
 }
 
@@ -85,6 +85,15 @@ body {
   display: block;
   min-height: 250px;
   height: 50vh;
+}
+
+.carousel .carousel-cell .description {
+  padding-left: 10px;
+  color: #FFF;
+}
+
+.carousel .carousel-cell .description h3 {
+  margin-top: 37px;
 }
 
 .flickity-prev-next-button {

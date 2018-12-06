@@ -1,5 +1,28 @@
 'use strict';
 (function(){ 
+
+//Slides template
+	var templateSlide = document.getElementById('template-slide-item').innerHTML;
+	
+
+	Mustache.parse(templateSlide);
+	
+
+	
+	var listSlides = '';
+
+	for(var i = 0; i < slidesData.length; i++){
+		console.log(slidesData);
+		listSlides += Mustache.render(templateSlide, slidesData[i]);
+	}
+	
+
+	
+	var fullProductList = Mustache.render(listSlides);
+	console.log(fullProductList)
+	results.insertAdjacentHTML('beforeend', fullProductList);
+//Carousel logic
+
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
   // options
