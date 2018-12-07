@@ -1,15 +1,22 @@
 'use strict';
 (function(){ 
-
 // Gooogle Maps init	
 window.initMap = function(){
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
+  var bernabeu = {lat: 40.4531, lng: -3.6883};
+  var markers = {};
+  console.log(slidesData[0].coords);
+
+  // The map, centered at Bernabeu Stadium
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+  document.getElementById('map'), {zoom: 4, center: bernabeu});
+
+  var marker = new google.maps.Marker({position: bernabeu, map: map});
+
+  // Creating markers based on slidesData
+  	for(var i = 0; i < slidesData.length; i++){
+  		markers[i] = new google.maps.Marker({position: slidesData[i].coords, map: map});
+  }
 }
 
 
@@ -24,14 +31,12 @@ window.initMap = function(){
 	var listSlides = '';
 
 	for(var i = 0; i < slidesData.length; i++){
-		console.log(slidesData);
 		listSlides += Mustache.render(templateSlide, slidesData[i]);
 	}
 	
 
 	
 	var fullProductList = Mustache.render(listSlides);
-	console.log(fullProductList)
 	results.insertAdjacentHTML('beforeend', fullProductList);
 //Carousel logic
 

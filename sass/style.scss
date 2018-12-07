@@ -9,6 +9,10 @@ body {
 body { font-family: sans-serif; }
 .wrapper {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #FFF;
 	.header {
 		margin-bottom: 20px;
 		text-align: center;
@@ -106,7 +110,7 @@ body { font-family: sans-serif; }
 #map {
     height: 400px;  
 	width: 100%; 
-	max-width: 1200px;
+	max-width: 1218px;
 }
 
 @media screen and ( min-width: 768px ) {
