@@ -83,8 +83,9 @@ body {
 
 .carousel .carousel-cell .container img {
   display: block;
-  min-height: 250px;
-  height: 50vh;
+  height: auto;
+  max-height: 50vh;
+  width: 100%;
 }
 
 .carousel .carousel-cell .description {

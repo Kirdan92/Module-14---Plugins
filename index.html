@@ -16,16 +16,16 @@
 	</div>
 	<div class="carousel" data-flickity  id="results">
 	</div>
-	<div class="progress-bar"></div>
+	<div class="progress-bar"> <img src="" alt=""></div>
 	<div class="button-group">
  	 <button class="button"><i class="fas fa-undo"></i></button>
 	</div>
 </div>
 	<script id="template-slide-item" type="x-tmpl-mustache">
 		<div class="carousel-cell" id="carousel-cell{{ id }}">
-			<div class="container" style="background-image:url({{ image }})">
+			<div class="container">
 				<h2>{{ title }}</h2>
-				
+				<img src="{{ image }}" alt="{{ title }}">
 			</div>
 			<div class='description'>
 				<h3>Stadium data:</h3>
@@ -37,37 +37,37 @@
 	var slidesData = [
 		{
 			id: "1",
-			image: 'https://wallpaperfm.com/img/original/f/b/c/19210.jpg', 
+			image: 'images/bernabeu.jpg', 
 			title: 'Estadio Santiago Bernabéu, Madrid', 
 			description: "<p>Capacity: 81 044.</p>  <p>Open date: 14-DEC-1947</p>"
 		},
 		{
 			id: "2",
-			image: 'https://www.futbaltour.sk/wp-content/uploads/sites/4/2017/06/emirates-arsenal.jpg', 
+			image: 'images/stade-de-france.jpg', 
 			title: 'Stade De France, Paris', 
 			description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
 		},
 		{
 			id: "3",
-			image: 'https://experiences.lastminute.com/content/img/product/large/PTWICF.jpg', 
+			image: 'images/twickenham.jpg', 
 			title: 'Twickenham Stadium, London', 
 			description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
 		},
 		{
 			id: "4",
-			image: 'https://10mosttoday.com/wp-content/uploads/2015/03/Croke_park_dublin.jpg', 
+			image: 'images/croke-park.jpg', 
 			title: 'Croke Park, Dublin', 
 			description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
 		},
 		{
 			id: "5",
-			image: 'https://www.muralswallpaper.com/app/uploads/wembley-stadium-football-sports-plain-820x532.jpg', 
+			image: 'images/wembley.jpg', 
 			title: 'Wembley Stadium, London', 
 			description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
 		},
 		{
 			id: "6",
-			image: 'https://images.wallpaperscraft.com/image/barcelona_camp_nou_stadium_81198_1920x1080.jpg', 
+			image: 'images/camp-nou.jpg', 
 			title: 'Camp Nou, Barcelona', 
 			description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
 		}

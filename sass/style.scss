@@ -65,9 +65,10 @@ body { font-family: sans-serif; }
 		  		padding: 5px; 
 		  	}
 		  	img {
-			  display: block;
-			  min-height: 250px;
-			  height: 50vh;
+				display: block;
+				height: auto;
+				max-height: 50vh;
+				width: 100%;
 			}
  		 }
  		 .description {
