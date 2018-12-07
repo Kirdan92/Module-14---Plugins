@@ -77,7 +77,7 @@ body {
   max-height: 50vh;
   grid-template-columns: 100%;
   grid-template-rows: 38px auto 50px;
-  grid-template-areas: "header" "image" "description";
+  grid-template-areas: "header" "image" "description";
 }
 
 .carousel .carousel-cell .container h2 {
@@ -115,6 +115,8 @@ body {
   height: 20px;
   width: 0;
   background: #FFC107;
+  align-self: baseline;
+  left: 0;
 }
 
 #map {
