@@ -16,20 +16,23 @@
 	</div>
 	<div class="carousel" data-flickity  id="results">
 	</div>
-	<div class="progress-bar"> <img src="" alt=""></div>
+	<div class="progress-bar"></div>
 	<div class="button-group">
  	 <button class="button"><i class="fas fa-undo"></i></button>
 	</div>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
 </div>
 	<script id="template-slide-item" type="x-tmpl-mustache">
 		<div class="carousel-cell" id="carousel-cell{{ id }}">
 			<div class="container">
 				<h2>{{ title }}</h2>
 				<img src="{{ image }}" alt="{{ title }}">
-			</div>
-			<div class='description'>
-				<h3>Stadium data:</h3>
-				{{{description}}}
+				<div class='description'>
+					<h3>Stadium data:</h3>
+					{{{description}}}
+				</div>
 			</div>
 		</div>
 	</script>
@@ -77,5 +80,8 @@
 	<script type="text/javascript" src="vendor/hash.js"></script>
 	<script type="text/javascript" src="vendor/mustache.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+  	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQBrB7r28avhYkEXO2lCuhru2ATFeD8sE&callback=initMap">
+    </script>
 </body>
 </html>

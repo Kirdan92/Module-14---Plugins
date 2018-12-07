@@ -37,8 +37,6 @@ body { font-family: sans-serif; }
 }
 .carousel {
   background: #003366;
-  min-height: 250px;
-  height: 50%;
   width: 100%;
   .carousel-cell {
 	  width: 100%;
@@ -47,37 +45,51 @@ body { font-family: sans-serif; }
 	  counter-increment: carousel-cell;
 	  display: flex;
 	  justify-content: center;
+  	  flex-direction: column;
+	  align-items: center;
 	  min-height: 250px;
+	  max-height: 50vh;
 	    .container {
 		  	max-width: 1200px;
 		  	width: 100%;
-		  	background-color: #fff;
-		  	background-size: cover;
-   		 	background-position: center; 
+		 	background-color: #003366;
 		  	text-align: center;
-		  	min-height: 250px;
-		  	height: 100%;
+		  	display: grid;
+		  	height: 500px;
+		  	max-height: 50vh;
+		  	grid-template-columns: 100%;
+		  	grid-template-rows: 38px auto 50px;
+		  	grid-template-areas:
+		  		"header"
+		  		"image"
+		  		"description";
 		  	h2{
 		  		color: #eee;
 		  		text-transform: uppercase;
 		  		background-color: #003366;
 		  		margin: 0 auto;
 		  		padding: 5px; 
+		  		grid-area: header;
 		  	}
 		  	img {
+		  		height: 100%;
 				display: block;
-				height: auto;
-				max-height: 50vh;
 				width: 100%;
+				grid-area: image;
 			}
+ 		 	.description {
+	 		 	color: #FFF;
+	 		 	height: 50px;
+	 		 	display: flex;
+	 		 	flex-direction: row;
+	 		 	justify-content: space-between;
+	 		 	align-items: center;
+	 		 	grid-area: description;
+	 		 	h3 {
+	 		 	}
  		 }
- 		 .description {
- 		 	padding-left: 10px;
- 		 	color: #FFF;
- 		 	h3 {
- 		 		margin-top: 37px;
- 		 	}
  		 }
+
 	}
 
 }
@@ -89,6 +101,12 @@ body { font-family: sans-serif; }
   height: 20px;
   width: 0;
   background: #FFC107;
+}
+
+#map {
+    height: 400px;  
+	width: 100%; 
+	max-width: 1200px;
 }
 
 @media screen and ( min-width: 768px ) {
