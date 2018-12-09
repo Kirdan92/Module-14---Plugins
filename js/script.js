@@ -7,6 +7,10 @@ window.initMap = function(){
   var markers = {};
   console.log(slidesData[0].coords);
 
+  function moveToLocation(lat, lng){
+    var center = new google.maps.LatLng(lat, lng);
+    map.panTo(center);
+}
   // The map, centered at Bernabeu Stadium
   var map = new google.maps.Map(
   document.getElementById('map'), {zoom: 4, center: bernabeu});
@@ -16,6 +20,9 @@ window.initMap = function(){
   // Creating markers based on slidesData
   	for(var i = 0; i < slidesData.length; i++){
   		markers[i] = new google.maps.Marker({position: slidesData[i].coords, map: map});
+  		markers[i].addListener('click', (function() {
+		  flkty.select(this);
+		}).bind(i));
   }
 }
 
@@ -36,8 +43,10 @@ window.initMap = function(){
 	
 
 	
-	var fullProductList = Mustache.render(listSlides);
-	results.insertAdjacentHTML('beforeend', fullProductList);
+	var fullSlidesList = Mustache.render(listSlides);
+	results.insertAdjacentHTML('beforeend', fullSlidesList);
+
+
 //Carousel logic
 
 var elem = document.querySelector('.carousel');
@@ -71,6 +80,14 @@ resetIcon.addEventListener( 'click', function( event ){
   }
   flkty.select(0);
 });
+
+
+//CEnter map on slide change
+flkty.on( 'change', function( index ) {
+	var coords = slidesData[index].coords;
+	moveToLocation(coords.lat, coords.lng);
+});
+
 
 var progressBar = document.querySelector('.progress-bar')
 
