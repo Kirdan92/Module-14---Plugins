@@ -7,10 +7,12 @@ window.initMap = function(){
   var markers = {};
   console.log(slidesData[0].coords);
 
-  function moveToLocation(lat, lng){
+  window.moveToLocation = function(lat, lng){
     var center = new google.maps.LatLng(lat, lng);
+    // using global variable:
     map.panTo(center);
 }
+
   // The map, centered at Bernabeu Stadium
   var map = new google.maps.Map(
   document.getElementById('map'), {zoom: 4, center: bernabeu});
@@ -82,7 +84,7 @@ resetIcon.addEventListener( 'click', function( event ){
 });
 
 
-//CEnter map on slide change
+
 flkty.on( 'change', function( index ) {
 	var coords = slidesData[index].coords;
 	moveToLocation(coords.lat, coords.lng);
